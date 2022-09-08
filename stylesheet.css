@@ -39,6 +39,7 @@ html {
   /*no overflow*/
   overflow-x: hidden;
   height: 100%;
+  box-sizing: border-box;
   /*using my pre decided color using "var() function*/
   background-color: var(--five);
 }
@@ -72,14 +73,22 @@ html {
   padding: 13px 32px;
   text-decoration: none;
   margin-top: 2vh;
+  margin-bottom: 2vh; /*Här har jag en fråga, du hade inte den på din stylesheet*/
+}
+
+/*standard title heading*/
+.title{
+  margin-top: 20vh;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.5rem;
 }
 
 /*Above validated 2022-09-08 KL11:02*/
 
 /* 4. Navbar*/
-/* Navbar with flex method*/
-/*4. Navbar*/
-/*Navbar with flex method*/
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -115,7 +124,7 @@ html {
 .navbar-links ul {
   display: flex;
   padding: 0;
-  margin-top: 3vh;
+  margin-top: 1vh;
 }
 
 .navbar-links li {
@@ -130,7 +139,6 @@ html {
 }
 
 .navbar-links li:hover {
-  font-weight: 900;
   text-decoration: underline;
 }
 
@@ -168,6 +176,7 @@ html {
   .navbar-links {
     display: none;
     width: 100%;
+    height: 20vh;
   }
   .navbar-links ul {
     width: 100%;
@@ -176,11 +185,12 @@ html {
   .navbar-links ul li {
     text-align: center;
   }
-  .navbar-links ul li {
+  .navbar-links ul li a {
     padding: 0.05rem 1rem;
   }
   .navbar-links.active {
     display: flex;
+    background-color: var(--four);
   }
   .brand-title {
     margin-top: 2vw;
@@ -218,7 +228,7 @@ html {
   margin-top: 5vw;
 }
 
-@media only screen and (max-width: 3700px) {
+@media only screen and (max-width: 550px) {
   .hero-image {
     height: 140vh;
   }
@@ -239,8 +249,8 @@ Grid */
   height: auto;
 
   grid-template-areas:
-    "comment1  comment1 comment2 comment2"
-    "comment3 comment3  comment4 comment4";
+    "comment1 comment1 comment2 comment2"
+    "comment3 comment3 comment4 comment4"
 }
 
 #comment1 {
@@ -339,7 +349,7 @@ Grid */
 /* 7. Slideshow*/
 
 .slideshow-container {
-  width: 80%;
+  width: 70%;
   position: relative;
   justify-content: center;
   margin: 0 auto;
@@ -399,7 +409,7 @@ Grid */
       height:50vh;
   }
   .slideshow-container img{
-    width: 99%;   
+    width: 99%;
   }
 }
 
@@ -509,7 +519,7 @@ background-size: cover;
 /*Section Testimonials Grid Responsive settings*/
 
 @media only screen and (max-width:550px){
-  .info-grid-container{
+  .info-grid-container {
       grid-template-columns: 1fr;
       grid-template-rows: 4fr;
       row-gap: 5vh;
